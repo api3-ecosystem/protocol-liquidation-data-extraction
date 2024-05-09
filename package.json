@@ -1,0 +1,19 @@
+{
+  "name": "protocol-liquidation-data-extraction",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@api3/chains": "^8.1.0",
+    "axios": "^1.6.8",
+    "bignumber.js": "^9.1.2",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.11.1",
+    "graphql": "^16.8.1",
+    "graphql-request": "^6.1.0",
+    "viem": "^2.17.3"
+  }
+}

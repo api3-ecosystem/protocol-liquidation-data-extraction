@@ -1,0 +1,22 @@
+service: searcher-profit-indexer
+frameworkVersion: "3"
+provider:
+  name: aws
+  runtime: nodejs18.x
+  stage: dev
+  region: us-east-1
+  vpc:
+    securityGroupIds:
+      - sg-0ff9985cdc8fed442
+    subnetIds:
+      - subnet-0b539f5afe5c80cf7
+      - subnet-00edf3c4b587afe2c
+      - subnet-0a6462cdcb3b8c056
+      - subnet-0b02e310a23667aeb
+      - subnet-026c30e45785cd5ea
+      - subnet-04fdeb7b998b1d83d
+functions:
+  indexBlock:
+    handler: handler.indexBlock
+    events:
+      - schedule: rate(500 minutes)
